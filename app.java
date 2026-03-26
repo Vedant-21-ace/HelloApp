@@ -3,12 +3,8 @@ public class Main {
         if (args.length == 0) {
             System.out.println("Hello, World!");
         } else {
-            String result = "Hello, ";
-            for (String name : args) {
-                result += name + ", ";
-            }
-            result = result.substring(0, result.length() - 2);
-            System.out.println(result);
+            String names = String.join(", ", args);
+            System.out.println("Hello, " + names);
         }
     }
 }
